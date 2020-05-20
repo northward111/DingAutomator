@@ -2,6 +2,7 @@ import os
 import time
 import uiautomator2 as u2
 from util.ding_util import send_msg
+import random
 
 
 def send_ding(msg):
@@ -90,7 +91,7 @@ def start_main():
         print(exec_msg)
         send_ding(exec_msg)
         once()
-        sleep(60 * 10)
+        sleep(60 * 10 * (1 + random.random()))
 
 
 if __name__ == "__main__":
